@@ -2,6 +2,12 @@ import { motion } from "framer-motion";
 import { Sparkles, TrendingUp, Wallet, Zap } from "lucide-react";
 import ReferralCard from "@/components/ReferralCard";
 
+import sliceLogo from "@/assets/slice-logo.png";
+import angeloneLogo from "@/assets/angelone-logo.png";
+import airtelLogo from "@/assets/airtel-logo.png";
+import upstoxLogo from "@/assets/upstox-logo.png";
+import naviLogo from "@/assets/navi-logo.png";
+
 const referrals = [
   {
     name: "Slice App",
@@ -14,8 +20,8 @@ const referrals = [
     ],
     code: "ABHIS13394",
     link: "https://t.sliceit.com/s?c=k5Lx12e&ic=ABHIS13394",
-    logo: "https://play-lh.googleusercontent.com/GmVLn4aQrlZ0qJPLZ0bWNQ0pJBJN9Wyt9JfVCxVrRvWVKELJZLhEQCzlZCXZZNJZGQ=w240-h480-rw",
-    brandColor: "#FF6B35",
+    logo: sliceLogo,
+    brandColor: "#9333EA",
   },
   {
     name: "Angel One",
@@ -28,7 +34,7 @@ const referrals = [
       "FREE Demat Account",
     ],
     link: "https://angel-one.onelink.me/Wjgr/7usia5px",
-    logo: "https://play-lh.googleusercontent.com/s6oFYpPmXQYjYJ9sQ7nFWHrCrLWlKdQzMA8G8mUZxmqR0mPZVJsJKzT_g0BpN_ZiOA=w240-h480-rw",
+    logo: angeloneLogo,
     brandColor: "#FF5722",
   },
   {
@@ -42,7 +48,7 @@ const referrals = [
       "UPI payments enabled",
     ],
     link: "https://airtel.onelink.me/fz7c/xyc2q5c3",
-    logo: "https://play-lh.googleusercontent.com/2xVuaHSZZXWVQnMHKGWBQl3hZwJZH_fJQQrJWLIZLZhw3HZS5MvKZ3JXQN1Z1Z3JJZQ=w240-h480-rw",
+    logo: airtelLogo,
     brandColor: "#ED1C24",
   },
   {
@@ -56,7 +62,7 @@ const referrals = [
       "Pro Mode for F&O trading",
     ],
     link: "https://upstox.onelink.me/0H1s/2YCQPN",
-    logo: "https://play-lh.googleusercontent.com/rGF8xr1YZ-fQKHBRMgXMX_k5LPMxG_X6Z-RYKGZr3QlNJVRZLJGW9NJWkDU9dH5PYvE=w240-h480-rw",
+    logo: upstoxLogo,
     brandColor: "#7B2D8E",
   },
   {
@@ -70,7 +76,7 @@ const referrals = [
       "Multiple rewards on usage",
     ],
     link: "https://r.navi.com/5uCCpB",
-    logo: "https://play-lh.googleusercontent.com/IYKJuMSFzJcYyQdJdJ5d1q3xSq3w3JG2Ja5qSFQ1H7n-aGCy0Q4NJyL7DQXC8Q3qnA=w240-h480-rw",
+    logo: naviLogo,
     brandColor: "#00D09C",
   },
 ];
