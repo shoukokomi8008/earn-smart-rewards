@@ -83,7 +83,7 @@ const referrals = [
   },
   {
     name: "Navi UPI",
-    reward: "₹150",
+    reward: "₹100",
     steps: [
       "Download Navi app",
       "Set up your UPI account",
