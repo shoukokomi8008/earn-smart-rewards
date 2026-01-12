@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Gift } from "lucide-react";
+import { ExternalLink, Gift, Check } from "lucide-react";
 
 interface ReferralCardProps {
   name: string;
@@ -9,39 +9,69 @@ interface ReferralCardProps {
   code?: string;
   steps?: string;
   delay?: number;
+  logo: string;
+  brandColor: string;
 }
 
-const ReferralCard = ({ name, reward, benefits, link, code, steps, delay = 0 }: ReferralCardProps) => {
+const ReferralCard = ({ name, reward, benefits, link, code, steps, delay = 0, logo, brandColor }: ReferralCardProps) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay }}
+      initial={{ opacity: 0, y: 40, scale: 0.95 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{ duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] }}
       className="group relative"
     >
-      <div className="absolute -inset-0.5 bg-gradient-to-r from-reward to-reward-glow rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-500" />
-      <div className="relative bg-card rounded-2xl p-6 border border-card-border hover:border-reward/50 transition-all duration-300">
-        {/* Reward Badge */}
-        <div className="absolute -top-3 -right-3">
-          <div className="bg-gradient-to-r from-reward to-reward-glow text-reward-foreground px-4 py-1.5 rounded-full text-sm font-bold shadow-lg flex items-center gap-1.5">
-            <Gift className="w-4 h-4" />
+      {/* Glow effect */}
+      <div 
+        className="absolute -inset-1 rounded-3xl blur-xl opacity-0 group-hover:opacity-40 transition-all duration-700"
+        style={{ background: `linear-gradient(135deg, ${brandColor}, hsl(var(--primary)))` }}
+      />
+      
+      <div className="relative bg-glass rounded-3xl p-6 border border-border/50 hover:border-primary/30 transition-all duration-500 overflow-hidden h-full">
+        {/* Shimmer effect */}
+        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <div 
+            className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer"
+            style={{ backgroundSize: "200% 100%" }}
+          />
+        </div>
+
+        {/* Header with logo and reward */}
+        <div className="flex items-start justify-between mb-4 relative z-10">
+          <div className="flex items-center gap-3">
+            <div 
+              className="w-14 h-14 rounded-2xl flex items-center justify-center overflow-hidden shadow-lg"
+              style={{ background: `linear-gradient(135deg, ${brandColor}20, ${brandColor}40)` }}
+            >
+              <img src={logo} alt={name} className="w-10 h-10 object-contain" />
+            </div>
+            <div>
+              <h3 className="text-lg font-bold text-foreground">{name}</h3>
+              <p className="text-xs text-muted-foreground">Referral Reward</p>
+            </div>
+          </div>
+          
+          {/* Reward Badge */}
+          <div className="flex items-center gap-1.5 bg-primary/10 border border-primary/20 text-primary px-3 py-1.5 rounded-full text-sm font-bold">
+            <Gift className="w-3.5 h-3.5" />
             {reward}
           </div>
         </div>
 
-        {/* App Name */}
-        <h3 className="text-xl font-bold text-foreground mb-3 pr-16">{name}</h3>
-
-        {/* Steps if provided */}
+        {/* Steps */}
         {steps && (
-          <p className="text-muted-foreground text-sm mb-3 leading-relaxed">{steps}</p>
+          <div className="bg-secondary/50 rounded-xl px-4 py-3 mb-4 border border-border/50 relative z-10">
+            <p className="text-sm text-muted-foreground leading-relaxed">{steps}</p>
+          </div>
         )}
 
         {/* Benefits */}
-        <ul className="space-y-2 mb-4">
+        <ul className="space-y-2.5 mb-5 relative z-10">
           {benefits.map((benefit, index) => (
-            <li key={index} className="flex items-start gap-2 text-sm text-muted-foreground">
-              <span className="text-reward mt-0.5">✓</span>
+            <li key={index} className="flex items-start gap-2.5 text-sm text-muted-foreground">
+              <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <Check className="w-3 h-3 text-primary" />
+              </div>
               <span>{benefit}</span>
             </li>
           ))}
@@ -49,9 +79,9 @@ const ReferralCard = ({ name, reward, benefits, link, code, steps, delay = 0 }: 
 
         {/* Referral Code */}
         {code && (
-          <div className="bg-muted/50 rounded-lg px-3 py-2 mb-4 border border-border">
-            <span className="text-xs text-muted-foreground">Use code: </span>
-            <span className="font-mono font-bold text-reward">{code}</span>
+          <div className="bg-secondary/80 rounded-xl px-4 py-3 mb-5 border border-border/50 relative z-10">
+            <span className="text-xs text-muted-foreground block mb-1">Referral Code</span>
+            <span className="font-mono font-bold text-primary text-lg tracking-wider">{code}</span>
           </div>
         )}
 
@@ -60,7 +90,7 @@ const ReferralCard = ({ name, reward, benefits, link, code, steps, delay = 0 }: 
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-reward to-reward-glow text-reward-foreground font-semibold py-3 px-6 rounded-xl hover:shadow-lg hover:shadow-reward/25 transition-all duration-300 hover:scale-[1.02]"
+          className="relative z-10 w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-reward-glow text-primary-foreground font-semibold py-3.5 px-6 rounded-xl hover:shadow-xl hover:shadow-primary/20 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
         >
           Get Started
           <ExternalLink className="w-4 h-4" />
