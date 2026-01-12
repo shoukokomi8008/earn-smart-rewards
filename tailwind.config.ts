@@ -46,6 +46,12 @@ export default {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+          border: "hsl(var(--card-border))",
+        },
+        reward: {
+          DEFAULT: "hsl(var(--reward))",
+          glow: "hsl(var(--reward-glow))",
+          foreground: "hsl(var(--reward-foreground))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
