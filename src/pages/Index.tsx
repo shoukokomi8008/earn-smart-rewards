@@ -41,7 +41,7 @@ const referrals = [
       "Quick SIP in Direct Mutual Funds",
       "₹1 Lakh MTF at 0% interest",
     ],
-    link: "https://angel-one.onelink.me/Wjgr/7usia5px",
+    link: "https://angel-one.onelink.me/Wjgr/j4j8uci4",
     logo: angeloneLogo,
     brandColor: "#FF5722",
   },
