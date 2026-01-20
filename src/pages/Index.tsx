@@ -59,7 +59,7 @@ const referrals = [
       "Safe & secure banking",
       "UPI payments enabled",
     ],
-    link: "https://i.airtel.in/refandearnLGXDMKCKYC",
+    link: "https://i.airtel.in/refandearnPJXQTLCKYC",
     logo: airtelLogo,
     brandColor: "#ED1C24",
   },
