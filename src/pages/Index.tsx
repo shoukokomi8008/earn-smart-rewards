@@ -24,7 +24,7 @@ const referrals = [
       "Money works smarter than sitting idle",
     ],
     code: "&BHAVE87149",
-    link: "https://t.sliceit.com/s?c=nwuI7YK&ic=BHAVE87149",
+    link: "https://t.sliceit.com/s?c=kdN-B4h&ic=&BHAVE87149",
     logo: sliceLogo,
     brandColor: "#9333EA",
   },
