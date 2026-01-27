@@ -23,8 +23,8 @@ const referrals = [
       "Daily interest at 100% RBI repo rate",
       "Money works smarter than sitting idle",
     ],
-    code: "&ABHIS13394",
-    link: "https://t.sliceit.com/s?c=k5Lx12e&ic=ABHIS13394",
+    code: "&BHAVE87149",
+    link: "https://t.sliceit.com/s?c=nwuI7YK&ic=BHAVE87149",
     logo: sliceLogo,
     brandColor: "#9333EA",
   },
@@ -87,8 +87,8 @@ const referrals = [
     steps: [
       "Download Navi app",
       "Set up your UPI account",
-      "Complete 10 UPI transactions",
-      "Earn rewards on each payment",
+      "Complete 1 UPI transaction",
+      "Earn 100RS on first payment",
     ],
     benefits: [
       "Up to ₹100 back on first payment",
