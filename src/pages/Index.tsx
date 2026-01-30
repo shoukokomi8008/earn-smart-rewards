@@ -77,7 +77,7 @@ const referrals = [
       "News & expert insights",
       "Pro Mode for F&O trading",
     ],
-    link: "https://upstox.onelink.me/0H1s/2YCQPN",
+    link: "https://upstox.onelink.me/0H1s/43AVDM",
     logo: upstoxLogo,
     brandColor: "#7B2D8E",
   },
