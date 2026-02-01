@@ -23,7 +23,7 @@ const referrals = [
       "Daily interest at 100% RBI repo rate",
       "Money works smarter than sitting idle",
     ],
-    code: "&BHAVE87149",
+    code: "&ABHIS13394",
     link: "https://t.sliceit.com/s?c=k5Lx12e&ic=ABHIS13394",
     logo: sliceLogo,
     brandColor: "#9333EA",
