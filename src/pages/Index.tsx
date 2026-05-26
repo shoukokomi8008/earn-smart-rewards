@@ -11,11 +11,11 @@ import naviLogo from "@/assets/navi-logo.png";
 const referrals = [
   {
     name: "Slice App",
-    reward: "₹150",
+    reward: "₹250",
     steps: [
       "Download the Slice app",
       "Install and complete KYC",
-      "Deposit ₹1 to your account",
+      "Open Slice Credit Card",
       "Send ₹1 to anyone via UPI",
     ],
     benefits: [
@@ -41,7 +41,7 @@ const referrals = [
       "Quick SIP in Direct Mutual Funds",
       "₹1 Lakh MTF at 0% interest",
     ],
-    link: "https://angel-one.onelink.me/Wjgr/pkdsrjp7",
+    link: "https://angel-one.onelink.me/Wjgr/7usia5px",
     logo: angeloneLogo,
     brandColor: "#FF5722",
   },
@@ -83,7 +83,7 @@ const referrals = [
   },
   {
     name: "Navi UPI",
-    reward: "₹100",
+    reward: "₹120",
     steps: [
       "Download Navi app",
       "Set up your UPI account",
